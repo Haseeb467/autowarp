@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Use the Autoskins Avery Dennison wrap visualizer to preview wrap colors and finishes on your vehicle." />
+    <title>Wrap Visualizer | Autoskins</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../css/style.css" />
+    <noscript><style>body{opacity:1}</style></noscript>
+  </head>
+  <body>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="../index.html" aria-label="Autoskins home">
+          <span class="brand-mark">A</span>
+          <span class="brand-copy">
+            <span class="brand-name">Autoskins</span>
+            <span class="brand-tag">Protection Meets Perfection</span>
+          </span>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a class="nav-link" href="../index.html">Home</a>
+          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link" href="gallery.html">Gallery</a>
+          <a class="nav-link is-active" href="visualizer.html">Visualizer</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn-primary nav-quote" href="contact.html">Get a Quote</a>
+          <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero" style="--page-image: url('../assets/images/generated/page-visualizer.jpg')">
+        <div class="container">
+          <p class="eyebrow reveal">Visualizer</p>
+          <h1 class="reveal">Preview the Finish</h1>
+          <p class="lead reveal">Use the Avery Dennison visualizer below to explore colors, finishes, and vehicle styles before your Autoskins consultation.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head center">
+            <p class="eyebrow reveal">Instant Preview</p>
+            <h2 class="reveal">Build Your Look</h2>
+            <p class="lead reveal">
+              Pick a body style, film color, finish, and studio background before sending the direction to Autoskins.
+            </p>
+          </div>
+
+          <div class="visualizer-tool reveal" data-wrap-visualizer>
+            <div class="visualizer-preview" data-preview-bg="studio">
+              <div class="visualizer-scene">
+                <div class="car-render" data-preview-car="coupe" data-preview-finish="gloss" aria-label="Wrap preview vehicle">
+                  <div class="car-shadow"></div>
+                  <div class="car-body">
+                    <div class="car-gloss"></div>
+                    <div class="car-cabin"></div>
+                    <div class="car-window car-window-front"></div>
+                    <div class="car-window car-window-rear"></div>
+                    <div class="car-light car-light-front"></div>
+                    <div class="car-light car-light-rear"></div>
+                    <div class="car-wheel car-wheel-front"></div>
+                    <div class="car-wheel car-wheel-rear"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="visualizer-readout">
+                <span data-preview-vehicle-label>Performance Coupe</span>
+                <strong data-preview-color-label>Gloss Red</strong>
+              </div>
+            </div>
+
+            <div class="visualizer-controls">
+              <div class="control-group">
+                <span class="control-label">Vehicle</span>
+                <div class="segmented-control">
+                  <button class="is-active" type="button" data-preview-vehicle="coupe" data-label="Performance Coupe">Coupe</button>
+                  <button type="button" data-preview-vehicle="sedan" data-label="Luxury Sedan">Sedan</button>
+                  <button type="button" data-preview-vehicle="suv" data-label="Sport SUV">SUV</button>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <span class="control-label">SWF Colors</span>
+                <div class="swatch-grid" aria-label="Wrap color options">
+                  <button class="swatch is-active" type="button" data-preview-color="#e63c2f" data-label="Gloss Red" style="--swatch: #e63c2f" aria-label="Gloss Red"></button>
+                  <button class="swatch" type="button" data-preview-color="#0c0c0c" data-label="Obsidian Black" style="--swatch: #0c0c0c" aria-label="Obsidian Black"></button>
+                  <button class="swatch" type="button" data-preview-color="#d9d9d6" data-label="Satin Pearl" style="--swatch: #d9d9d6" aria-label="Satin Pearl"></button>
+                  <button class="swatch" type="button" data-preview-color="#636b73" data-label="Nardo Grey" style="--swatch: #636b73" aria-label="Nardo Grey"></button>
+                  <button class="swatch" type="button" data-preview-color="#1d4ed8" data-label="Deep Blue" style="--swatch: #1d4ed8" aria-label="Deep Blue"></button>
+                  <button class="swatch" type="button" data-preview-color="#134e4a" data-label="Forest Green" style="--swatch: #134e4a" aria-label="Forest Green"></button>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <span class="control-label">Finish</span>
+                <div class="segmented-control">
+                  <button class="is-active" type="button" data-preview-finish="gloss">Gloss</button>
+                  <button type="button" data-preview-finish="satin">Satin</button>
+                  <button type="button" data-preview-finish="matte">Matte</button>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <span class="control-label">Background</span>
+                <div class="segmented-control">
+                  <button class="is-active" type="button" data-preview-bg="studio">Studio</button>
+                  <button type="button" data-preview-bg="street">Street</button>
+                  <button type="button" data-preview-bg="night">Night</button>
+                </div>
+              </div>
+
+              <a class="btn btn-primary" href="contact.html">Send This Direction <i data-lucide="send"></i></a>
+            </div>
+          </div>
+
+          <div class="official-visualizer reveal">
+            <div>
+              <p class="eyebrow">Avery Dennison 3D</p>
+              <h3>Official 3D Tool</h3>
+              <p>For the full Avery vehicle and film library, open the official tool in a new browser tab.</p>
+            </div>
+            <div class="official-actions">
+              <button class="btn btn-outline" type="button" data-load-official-visualizer>
+                Load Here
+                <i data-lucide="box"></i>
+              </button>
+              <a class="btn btn-primary" href="https://www.averydennison3d.app/" target="_blank" rel="noreferrer">
+                Open Fastest
+                <i data-lucide="external-link"></i>
+              </a>
+            </div>
+            <div class="visualizer-frame" data-official-frame>
+              <iframe
+                data-src="https://www.averydennison3d.app/"
+                title="Avery Dennison 3D Wrap Visualizer"
+                loading="lazy"
+                allow="fullscreen; clipboard-write; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-cta">
+          <div>
+            <p class="eyebrow">Autoskins Studio</p>
+            <h2>Ready to Build the Next Look?</h2>
+          </div>
+          <a class="btn btn-primary" href="contact.html">Get a Quote <i data-lucide="arrow-up-right"></i></a>
+        </div>
+        <div class="footer-top">
+          <div class="footer-copy">
+            <a class="brand" href="../index.html" aria-label="Autoskins home">
+              <span class="brand-mark">A</span>
+              <span class="brand-copy">
+                <span class="brand-name">Autoskins</span>
+                <span class="brand-tag">Protection Meets Perfection</span>
+              </span>
+            </a>
+            <p>Premium automotive styling and protection for wraps, PPF, tint, coatings, color changes, and chrome deletes.</p>
+            <div class="footer-badges" aria-label="Autoskins standards">
+              <span><i data-lucide="badge-check"></i> Certified Installers</span>
+              <span><i data-lucide="shield-check"></i> Warranty Backed</span>
+            </div>
+            <div class="social-row" aria-label="Social links">
+              <a href="https://www.instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><i data-lucide="camera"></i></a>
+              <a href="https://www.facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook"><i data-lucide="thumbs-up"></i></a>
+              <a href="https://www.youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube"><i data-lucide="play"></i></a>
+            </div>
+          </div>
+          <nav class="footer-column" aria-label="Footer navigation">
+            <h3><i data-lucide="layout-grid"></i> Explore</h3>
+            <div class="footer-links">
+              <a href="services.html"><i data-lucide="chevron-right"></i> Services</a>
+              <a href="gallery.html"><i data-lucide="chevron-right"></i> Gallery</a>
+              <a href="visualizer.html"><i data-lucide="chevron-right"></i> Wrap Visualizer</a>
+              <a href="about.html"><i data-lucide="chevron-right"></i> About</a>
+              <a href="contact.html"><i data-lucide="chevron-right"></i> Contact</a>
+              <a href="contact.html"><i data-lucide="chevron-right"></i> Get a Quote</a>
+            </div>
+          </nav>
+          <nav class="footer-column" aria-label="Footer services">
+            <h3><i data-lucide="sparkles"></i> Services</h3>
+            <div class="footer-links">
+              <a href="services.html#car-wraps"><i data-lucide="chevron-right"></i> Full Car Wraps</a>
+              <a href="services.html#ppf"><i data-lucide="chevron-right"></i> Paint Protection Film</a>
+              <a href="services.html#window-tinting"><i data-lucide="chevron-right"></i> Window Tinting</a>
+              <a href="services.html#color-change"><i data-lucide="chevron-right"></i> Color Change Wraps</a>
+              <a href="services.html#ceramic-coatings"><i data-lucide="chevron-right"></i> Ceramic Coatings</a>
+              <a href="services.html#chrome-deletes"><i data-lucide="chevron-right"></i> Chrome Deletes</a>
+            </div>
+          </nav>
+          <address class="footer-contact footer-column">
+            <h3><i data-lucide="map-pin"></i> Contact</h3>
+            <a class="footer-contact-line" href="tel:+15550147827">
+              <span class="footer-icon"><i data-lucide="phone"></i></span>
+              <span><strong>Call</strong>+1 (555) 014-7827</span>
+            </a>
+            <a class="footer-contact-line" href="mailto:hello@autoskins.com">
+              <span class="footer-icon"><i data-lucide="mail"></i></span>
+              <span><strong>Email</strong>hello@autoskins.com</span>
+            </a>
+            <span class="footer-contact-line">
+              <span class="footer-icon"><i data-lucide="navigation"></i></span>
+              <span><strong>Studio</strong>123 Performance Drive<br />Los Angeles, CA 90001</span>
+            </span>
+            <span class="footer-contact-line">
+              <span class="footer-icon"><i data-lucide="clock-3"></i></span>
+              <span><strong>Hours</strong>Mon-Sat, 9am-6pm</span>
+            </span>
+          </address>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 Autoskins. All rights reserved.</span>
+          <span><i data-lucide="gauge"></i> Protection Meets Perfection</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="../js/main.js" defer></script>
+  </body>
+</html>
