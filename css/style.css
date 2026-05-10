@@ -158,15 +158,14 @@ button {
 .brand-logo {
   width: clamp(150px, 14vw, 210px);
   height: 54px;
-  object-fit: cover;
-  object-position: center 56%;
-  mix-blend-mode: screen;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .footer-copy .brand-logo {
   width: clamp(180px, 18vw, 260px);
   height: 78px;
-  object-position: center 58%;
+  object-position: left center;
 }
 
 .brand-mark {
@@ -642,6 +641,55 @@ p {
   color: transparent;
   -webkit-text-stroke: clamp(2px, 0.28vw, 5px) #fff;
   text-shadow: 0 20px 52px rgba(0, 0, 0, 0.58);
+}
+
+.hero-refined .hero-title-logo {
+  max-width: min(92vw, 780px);
+  gap: clamp(10px, 2vh, 18px);
+  transform: none;
+}
+
+.hero-refined .hero-title-logo .hero-title-solid {
+  margin-bottom: 0;
+  transform: skewX(-8deg);
+}
+
+.hero-logo-title {
+  width: min(82vw, 720px);
+  max-height: clamp(118px, 20vw, 260px);
+  object-fit: contain;
+  filter: drop-shadow(0 24px 34px rgba(0, 0, 0, 0.16));
+}
+
+.hero-light {
+  background:
+    radial-gradient(circle at 72% 18%, rgba(0, 179, 107, 0.14), transparent 26rem),
+    linear-gradient(180deg, #f7f7f3 0%, #ecece8 56%, #050505 100%);
+}
+
+.hero-light .hero-media img {
+  filter: saturate(0.92) contrast(1.12) brightness(1.03);
+  object-position: center 58%;
+}
+
+.hero-refined.hero-light::before {
+  background:
+    linear-gradient(180deg, rgba(245, 245, 240, 0.08) 0%, rgba(245, 245, 240, 0.16) 34%, rgba(6, 6, 6, 0.3) 72%, rgba(5, 5, 5, 0.86) 100%),
+    radial-gradient(ellipse at 50% 38%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.24) 42%, rgba(0, 0, 0, 0.18) 100%);
+}
+
+.hero-light .hero-title-solid,
+.hero-light .lead {
+  color: rgba(4, 6, 5, 0.72);
+  text-shadow: none;
+}
+
+.hero-light .hero-title-solid {
+  color: #050505;
+}
+
+.hero-light .eyebrow {
+  color: #034b32;
 }
 
 .hero-refined .lead {
