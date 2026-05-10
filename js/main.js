@@ -8,8 +8,55 @@
 
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  const setupSiteLoader = () => {
+    const loader = document.querySelector(".site-loader");
+    if (!loader) {
+      return {
+        show: () => {},
+        hide: () => {
+          body.classList.remove("loader-active");
+          body.classList.add("page-loaded");
+        },
+      };
+    }
+
+    const bar = loader.querySelector("[data-loader-bar]");
+    const progress = loader.querySelector("[data-loader-progress]");
+
+    const setStaticState = () => {
+      if (bar) bar.style.width = "100%";
+      if (progress) progress.textContent = "";
+    };
+
+    const show = () => {
+      if (!loader) return;
+      setStaticState();
+      loader.removeAttribute("hidden");
+      loader.removeAttribute("aria-hidden");
+      body.classList.remove("loader-complete");
+      body.classList.add("loader-active");
+    };
+
+    const hide = () => {
+      if (!loader) {
+        body.classList.remove("loader-active");
+        body.classList.add("page-loaded");
+        return;
+      }
+      setStaticState();
+      body.classList.add("loader-complete", "page-loaded");
+      body.classList.remove("loader-active");
+      loader.setAttribute("aria-hidden", "true");
+    };
+
+    show();
+    return { show, hide };
+  };
+
+  const siteLoader = setupSiteLoader();
+
   window.addEventListener("load", () => {
-    body.classList.add("page-loaded");
+    siteLoader.hide();
     if (window.lucide) {
       window.lucide.createIcons();
     }
@@ -80,12 +127,13 @@
     document.querySelectorAll('a[href]:not([target]):not([href^="#"]):not([href^="mailto:"]):not([href^="tel:"])').forEach((link) => {
       link.addEventListener("click", (event) => {
         const url = new URL(link.href, window.location.href);
-        if (url.origin !== window.location.origin || prefersReducedMotion) return;
+        if (url.origin !== window.location.origin) return;
         event.preventDefault();
+        siteLoader.show();
         body.classList.add("page-exiting");
         window.setTimeout(() => {
           window.location.href = url.href;
-        }, 260);
+        }, 220);
       });
     });
   };
